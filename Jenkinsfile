@@ -8,11 +8,9 @@ pipeline {
 		
             steps {
                 sh '''
-
+        git clean -fdx  //clean before checkout
     	docker-compose --version
         docker-compose up -d --force-recreate
-	//Remove the Working Dir
-	rm -rf ./* 
 	
 	
 	'''
